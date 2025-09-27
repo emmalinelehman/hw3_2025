@@ -2,44 +2,160 @@
 
 /*Write selector/rule property to add your border when
 links in the navigation are in the hover or focus state.*/
+/*2px purple dotted border to any link in the nav when it is in hover or focus state*/
+nav a:hover, nav a:focus {
+    border: 2px purple dotted;
+}
 
 
 /*Write selector/rule property to position the default position for the skip class element*/
+/*Link is positioned 65px above the top of its parent element
+When the link is in focus it is positioned 25px below the top of its parent (so it is visible only when in focus.)
+ */
 
+.skip a {
+    position: relative;
+    top: -65px;
+}
 
 /*Write selector/rule property to position the skip class element when it is in focus*/
+.skip a:focus {
+    top: -25px;
+}
 
-/*Write selector/rule property to style all elements when in focus*/
+/*Write selector/rule property to style all elements when in focus. */
+/*This should not override  links in the nav having a 2px purple dotted border*/
+*:focus {
+    border: 5px dashed green;
+}
 
+/*Write selector/rule property to style the container container class uses grid. it has 5 equal columns and 13px gap between rows and columns*/
+#main.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 13px;
+    grid-column-gap: 13px;
 
-
-/*Write selector/rule property to style the container */
+}
 
 
 /*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
+img {
+    width: 100%;
+}
+
+/*first child of the container class takes up all columns and uses header.jpg as non repeating  parallax image*/
+#main.container > :first-child {
+    grid-column: 1 / -1;
+    background-image: url(/images/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;   
+}
 
 
 /* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
  five rows in the grid. */
+/* The classes  .accounts, .onlinebanking, .security, .loans, .contact:
+Begin in 2nd column and span three columns. Begin on the 2nd, 3rd, 4th, 5th, and 6th rows respectively.*/
+.accounts {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+}
 
-      /*This will be a lot of rules.... but be strategic and combine selectors*/
+.onlinebanking {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
+
+.security {
+    grid-column: 2 / span 3;
+    grid-row: 4;
+}
+
+.loans {
+    grid-column: 2 / span 3;
+    grid-row: 5;
+}
+
+.contact {
+    grid-column: 2 / span 3;
+    grid-row: 6;
+}
+
+/*This will be a lot of rules.... but be strategic and combine selectors*/
+.accounts, .onlinebanking, .security, .loans, .contact {
+    grid-column: 2 / span 3;
+}
+
+/*The accounts-image, .onlinebanking-image, .security-image, .loans-image, .contact-image:
+Cover all of the columns, have a maximum height of 675px and begin on the 2nd, 3rd, 4th, 5th, and 6th rows respectively.*/
+.accounts-image {
+    grid-column: 1 / -1;
+    max-height: 675px;
+    grid-row: 2;
+}
+
+.onlinebanking-image {
+    grid-column: 1 / -1;
+    max-height: 675px;
+    grid-row: 3;
+}
+
+.security-image {
+    grid-column: 1 / -1;
+    max-height: 675px;
+    grid-row: 4;
+}
+
+.loans-image {
+    grid-column: 1 / -1;
+    max-height: 675px;
+    grid-row: 5;
+}
+
+.contact-image {
+    grid-column: 1 / -1;
+    max-height: 675px;
+    grid-row: 6;
+}
+
+/* Step 8: Write the selector/rule property to style the .text-block class. */
+/*Is centered horizontally and vertically with centered text.
+The lists inside of the .text-block class should be left aligned
+*/
+.text-block {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-block ul {
+    text-align: left;
+}
 
 
- /* Step 8: Write the selector/rule property to style the .text-block class. */
+/* Add your media query here  for desktop views of 825px and above*/
 
+@media (min-width: 825px) {
+    /*Move the navigation so that the nav is aligned to the other side of the window and has a padding of 35px on the top and bottom and 0 on the left and right.*/
 
-/* Add your media query here */
+    nav {
+        padding: 35px 0;
+        text-align: right;
+    }
 
+}
 
   /* Step 10: Write the selector/rule property to style the nav element */
 
- 
+
   /* Step 11: Write the selector/rule property to update the .container class */
 
 
-  /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
+/* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
 
 
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
-
