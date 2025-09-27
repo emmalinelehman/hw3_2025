@@ -140,22 +140,28 @@ The lists inside of the .text-block class should be left aligned
 
 @media (min-width: 825px) {
     /*Move the navigation so that the nav is aligned to the other side of the window and has a padding of 35px on the top and bottom and 0 on the left and right.*/
-
+/* Step 10: Write the selector/rule property to style the nav element */
     nav {
-        padding: 35px 0;
         text-align: right;
+        padding: 35px 0;
     }
 
-}
-
-  /* Step 10: Write the selector/rule property to style the nav element */
-
-
   /* Step 11: Write the selector/rule property to update the .container class */
-
+    #main.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 
 /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
-
-
+    .accounts, .security, .contact{
+        grid-column: 4 / span 3;
+    }
+    .accounts-image, .security-image, .contact-image{
+        grid-column: 1 / span 5;
+    }
+    .onlinebanking-image, .loans-image {
+        grid-column: 3 / span 5;
+    }
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
+}
