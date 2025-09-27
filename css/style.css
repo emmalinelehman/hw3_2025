@@ -150,6 +150,16 @@ The lists inside of the .text-block class should be left aligned
     #main.container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 13px;
+        grid-column-gap: 13px;
+    }
+    #main.container > :first-child {
+    grid-column: 1 / -1;
+    background-image: url(/images/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     }
 
 /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
@@ -164,4 +174,10 @@ The lists inside of the .text-block class should be left aligned
     }
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
+    .text-block {
+        max-height: 235px;
+        overflow: auto;
+
+
+    }
 }
