@@ -177,7 +177,7 @@ The lists inside of the .text-block class should be left aligned
     .text-block {
         max-height: 235px;
         overflow: auto;
-
-
+        text-align: center;
+        
     }
 }
