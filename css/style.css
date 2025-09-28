@@ -160,10 +160,7 @@ The lists inside of the .text-block class should be left aligned
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-}
-
-
+    background-position: center;}
 /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
     .accounts, .security, .contact{
         grid-column: 4 / span 3;
