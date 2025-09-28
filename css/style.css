@@ -47,7 +47,7 @@ img {
 /*first child of the container class takes up all columns and uses header.jpg as non repeating  parallax image*/
 #main.container > :first-child {
     grid-column: 1 / -1;
-    background-image: url(/images/header.jpg);
+    background-image: url(images/header.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
