@@ -153,13 +153,8 @@ The lists inside of the .text-block class should be left aligned
         grid-row-gap: 13px;
         grid-column-gap: 13px;
     }
-    #main.container > :first-child {
-    grid-column: 1 / -1;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    }
+   
+
 
 /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
     .accounts, .security, .contact{
